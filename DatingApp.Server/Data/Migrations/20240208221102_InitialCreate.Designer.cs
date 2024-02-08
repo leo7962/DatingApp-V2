@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DatingApp.Server.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240202232131_InitialCreate")]
+    [Migration("20240208221102_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -33,12 +33,11 @@ namespace DatingApp.Server.Data.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("UserName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("UserName");
+                    b.ToTable("Users");
                 });
 #pragma warning restore 612, 618
         }

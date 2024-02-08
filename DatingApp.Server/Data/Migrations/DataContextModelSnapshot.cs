@@ -30,12 +30,11 @@ namespace DatingApp.Server.Data.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("UserName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("UserName");
+                    b.ToTable("Users");
                 });
 #pragma warning restore 612, 618
         }
