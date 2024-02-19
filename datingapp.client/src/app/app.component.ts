@@ -33,5 +33,5 @@ export class AppComponent implements OnInit {
     );
   }
 
-  title = 'datingapp.client';
+  title = 'Hola Leo';
 }
